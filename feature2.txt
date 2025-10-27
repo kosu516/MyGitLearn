@@ -1,0 +1,14 @@
+I don't know how to "Use Git to bring the changes made to 
+main.txt on main into dev_f2, " so I ask chatGPT and get this: 
+
+# 1) Make sure you're clean and up to date
+git fetch origin
+git switch dev_f2
+
+# 2) Bring that single file from main into your branch
+# (newer Git)
+git restore --source=origin/main -- main.txt
+
+# 3) Commit it on dev_f2
+git add main.txt
+git commit -m "Update main.txt from main"
